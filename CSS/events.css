@@ -1,0 +1,60 @@
+body{
+  min-height: 80vh; 
+  overflow-x: hidden;
+}
+
+#sdgVideo {
+  position: relative;
+  margin-top:4%;
+  margin-left: 10%;
+  height: 50%;
+  width: 80%;
+  
+}
+
+.music {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.bgmplayer {
+  cursor: pointer;
+}
+
+.bgmplayer:hover {
+  margin: 3px;
+}
+
+.event h1{
+  font-size: 50px;
+  text-align: center;
+}
+
+.moreEvent{
+  margin-top: 5%;
+}
+.moreEvent table{
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+.aiesec{
+  position: absolute;
+  margin-left:13%;
+  margin-top: -3.5%;
+}
+
+
+
+

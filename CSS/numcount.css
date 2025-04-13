@@ -1,0 +1,117 @@
+.wrapper {
+    border: 1px solid transparent;
+    position: absolute;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    top: 110%;
+    left: 50%;
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.container {
+    width: 60vmin;
+    height: 28vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1em 0;
+    position: relative;
+    border-radius: 0.5em;
+    background-color: transparent;
+}
+
+#num {
+    color: #2F4F4F;
+    display: grid;
+    place-items: center;
+    font-weight: 600;
+    font-size: 6em;
+}
+
+#text {
+    color: #4682B4;
+    font-size: 1.5em;
+    text-align: center;
+    pad: 0.7em 0;
+    font-weight: 400;
+    line-height: 0;
+
+}
+
+@media  (max-width:1100px) {
+    .wrapper {
+        top: 100%;
+    }
+}
+
+@media  (max-width:1100px) {
+    .wrapper {
+        top: 90%;
+    }
+}
+
+@media  (max-width:912px) {
+    .wrapper {
+        top: 90%;
+    }
+}
+
+@media  (max-width:890px) {
+    .wrapper {
+        top:80%;
+    }
+}
+
+@media  (max-width:850px) {
+    .wrapper {
+        top:80%;
+    }
+}
+
+
+
+
+@media screen and (max-width:800px) {
+    .wrapper {
+        top: 75%;
+    }
+
+    #num{
+        font-size: 4em;
+    }
+
+    #text{
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .wrapper {
+        top: 75%;
+    }
+
+    #num{
+        font-size: 4em;
+    }
+
+    #text{
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .wrapper {
+        top: 62%;
+    }
+
+    #num{
+        font-size: 4em;
+    }
+
+    #text{
+        font-size: 0.6em;
+    }
+}
+

@@ -1,0 +1,60 @@
+body {
+    overflow-x: hidden;
+    background-color: snow;
+}
+
+#historyvideo {
+    margin-top: 5%;
+    margin-left: 30%;
+    position: absolute;
+}
+
+
+.logotext {
+    font-size: 30px;
+    font-family: Helvetica, sans-serif;
+    color: #4682B4;
+}
+
+#better {
+    margin-left: 5%;
+    position: absolute;
+    margin-top: 25%;
+}
+
+#world {
+    margin-left: 73%;
+    position: absolute;
+    margin-top: 25%;
+}
+
+#historytext {
+    margin-top: 45%;
+    margin-left: 2%;
+    position: absolute;
+    font-family: Helvetica, sans-serif;
+}
+
+#historytext p {
+    font-size: 20px;
+    line-height: 40px;
+    width: 93%;
+    text-align: justify;
+}
+
+
+
+@media screen and (max-width:912px) {
+    #historyvideo {
+        width: 50%;
+    }
+
+    .logotext {
+        font-size: smaller;
+    }
+
+    #world {
+        margin-left: 77%;
+
+    }
+}
