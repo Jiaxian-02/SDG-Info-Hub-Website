@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Better World</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/nav.css">
+    <link rel="stylesheet" type="text/css" href="css/contact.css">
+
+
+</head>
+
+<body>
+    <!--Navigation bar--> 
+    <div class="welc">
+        <header>
+            <nav class="navbar">
+                <span>
+                    <b><a href="final.html">Home</a></b>
+                    <div class="dropdown">
+                        <b><button class="dropbtn"><span>Events</span></b>
+                        <div class="dropdown-content">
+                            <a href="events.html">HOT Events</a>
+                            <a href="action.html">Take Action</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <b><button class="dropbtn"><span>About</span></b>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="about.html">History</a>
+                            <a href="contact.html">Contact</a>
+                        </div>
+                    </div>
+                    <b><a href="login.html">Log In / Sign Up</a></b>
+                </span>
+                <b>
+                    <div class="logo">BETTER WORLD</div></b>
+            </nav>
+        </header>
+
+    <!--Contact form--> 
+    <div id="overlay">
+        <form onsubmit="event.preventDefault();validateForm()">
+            <h1>Contact Us</h1>
+             <!--Name--> 
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Your name">
+            <small class="error"></small>
+
+            <!--Email--> 
+            <label for="name">Email:</label>
+            <input type="text" id="email" placeholder="Your Email">
+            <small class="error"></small>
+
+            <!--Message--> 
+            <label for="message">Message:</label>
+            <textarea id="message" placeholder="Your message" rows="6"></textarea>
+            <small class="error"></small>
+
+            <!--submit button--> 
+            <div class="center">
+                <input type="submit" value="Send Message">
+                <p id="success"></p>
+            </div>
+        </form>
+    </div>
+
+    <script src="js/contact.js"></script>
+</body>
+
+</html>

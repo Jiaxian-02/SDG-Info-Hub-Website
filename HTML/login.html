@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Log In/ Sign In</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/nav.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+
+</head>
+
+<body>
+    <!--navigation bar-->
+    <div class="welc">
+        <header>
+            <nav class="navbar">
+                <span>
+                    <b><a href="final.html">Home</a></b>
+                    <div class="dropdown">
+                        <b><button class="dropbtn"><span>Events</span></b>
+                        <i class="fa fa-caret-down"></i>
+                        <div class="dropdown-content">
+                            <a href="events.html">HOT Events</a>
+                            <a href="action.html">Take Action</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <b><button class="dropbtn"><span>About</span></b>
+                        <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="about.html">History</a>
+                            <a href="contact.html">Contact</a>
+                        </div>
+                    </div>
+                    <b><a href="login.html">Log In / Sign Up</a></b>
+                </span>
+                <b>
+                    <div class="logo">BETTER WORLD</div>
+                </b>
+            </nav>
+        </header>
+    </div>
+    <div class="hero">
+        <div class="form-box">
+
+            <!--login and sign-up sifthing button-->
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+                <button type="button" class="toggle-btn" onclick="signup()">Sign Up</button>
+            </div>
+
+            <!--Login form-->
+            <form id="log-in" class="input-group" action="sucess.html" method="post">
+                <input type="text" class="input-field" id="UserId" placeholder="User Id" name="UserId" required>
+                <input type="text" class="input-field" id="Password" placeholder="Password" name="password" required>
+                <input type="checkbox" class="check-box" required><span> Remember Me</span>
+                <button type="submit" class="submit-btn">Log In</button>
+            </form>
+
+            <!--Sign-up form-->
+            <form id="sign-up" class="input-group">
+                <input type="text" class="input-field" id="UserId1" placeholder="User Id" name="UserId" required>
+                <input type="email" class="input-field" id="email" placeholder="Email Id" name="email" required>
+                <input type="text" class="input-field" id="Password1" placeholder="Password" name="password " required>
+                <input type="checkbox" class="check-box" required><span> I agree to Terms & Conditions</span>
+                <div class="center">
+                    <button type="submit" class="submit-btn">Sign Up</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!--Login java script-->
+    <script src="js/login.js"></script>
+
+    <body>

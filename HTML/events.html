@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>TRENDING EVENTS</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/events.css">
+    <link rel="stylesheet" type="text/css" href="css/nav.css">
+    <link rel="stylesheet" type="text/css" href="css/trendingEvent.css">
+    <link rel="stylesheet" type="text/css" href="css/joinevent.css">
+
+</head>
+
+<body>
+    <!--Navigation bar--> 
+    <div class="welc">
+        <header>
+            <nav class="navbar">
+                <span>
+                    <b><a href="final.html">Home</a></b>
+                    <div class="dropdown">
+                        <b><button class="dropbtn"><span>Events</span></b>
+                        <div class="dropdown-content">
+                            <a href="events.html">HOT Events</a>
+                            <a href="action.html">Take Action</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <b><button class="dropbtn"><span>About</span></b>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="about.html">History</a>
+                            <a href="contact.html">Contact</a>
+                        </div>
+                    </div>
+                    <b><a href="login.html">Log In / Sign Up</a></b>
+                </span>
+                <b>
+                    <div class="logo">BETTER WORLD</div></b>
+            </nav>
+        </header>
+
+        <!--Loop sgd's video--> 
+        <div class=sdgVideo>
+            <video autoplay muted loop id="sdgVideo">
+                <source src="media/Do you know all 17 SDGs_.mp4" width="150%" height="50%">
+            </video>
+        </div>
+ 
+        <!--Music button--> 
+        <div class="music">
+            <div class="bgmplayer">
+                <img id="player" onclick="action(); changeImage();" src="media/play_b.png" width="30px" height="30px" />
+                <audio id="audio" src="media/bgm.mp3" loop autoloop></audio>
+            </div>
+        </div>
+
+        <!--Java script for black music icon-->
+        <script>
+            function changeImage() {
+                var image = document.getElementById('player');
+                if (image.src.match("pause")) {
+                    image.src = "media/play_b.png";
+                }
+                else {
+                    image.src = "media/pause_b.png";
+                }
+            }
+
+            var playing = false;
+
+            function action() {
+                var audio = document.getElementById("audio");
+                if (playing === false) {
+                    audio.play();
+                    playing = true;
+                } else {
+                    audio.pause();
+                    playing = false;
+                }
+            }
+        </script>
+
+        <!--Events-->
+        <div class="event" id="event">
+            <h1><b>TRENDING EVENTS </b></h1>
+            <div class="container">
+                <img src="media/sepakup2.png" width="700px" height="350px" class="image">
+                <div class="overlay" style="background-color: #CD5C5C">
+                    <div class="logopic">
+                        <img src="media/sdg4Logo.png" width="80px" height="80px" class="logo-pic">
+                        <div class="eventText">
+                            <h2><b>Speak Up</b></h2>
+                            <p>To empower Malaysian high school students to develop <br>
+                                themselves in self-character building and enhancing their <br>
+                                knowledge and skills in STEAM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--button for speak up-->
+            <a class="eventbtn" href="media/SU Project Booklet.pdf" role="button">Speak Up<br> Project Booklet</a>
+
+            <div class="container">
+                <img src="media/COP.png" width="700px" height="350px" class="image" style="margin-top:10%">
+                <div class="overlay" style="background-color: #F0E68C">
+                    <div class="logopic">
+                        <img src="media/sdg12Logo.png" width="80px" height="80px" class="logo-pic">
+                        <div class="eventText">
+                            <h2><b>Clean Our Plate</b></h2>
+                            <p>Bring awareness to the Malaysian communities about<br>
+                                food waste management and reponsible consumer behavior</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--button for clean our plate-->
+            <a class="eventbtn" href="media/COP project.pdf" role="button">Clean Our Plate<br> Project Booklet</a>
+
+            <div class="container">
+                <img src="media/gfgi.jpg" width="700px" height="350px" class="image" style="margin-top:10%">
+                <div class="overlay" style="background-color: #DB7093">
+                    <div class="logopic">
+                        <img src="media/sdg10Logo.png" width="80px" height="80px" class="logo-pic">
+                        <div class="eventText">
+                            <h2><b>Get Fit, Get Inclusive</b></h2>
+                            <p>Aim to raise awareness towards Special Needs Community,<br>
+                                reduces the current stigma and discrimination faced<br>
+                                by them.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--button for get fit get inclusive-->
+            <a class="eventbtn" href="media/gfgiPB.pdf" role="button">Get Fit,<br>Get Inclusive<br> Project Booklet</a>
+        </div>
+
+        <!--button for apply now-->
+        <div class=joinevent>
+            <h2>Interested In The Events?</h2>
+            <a class="joinbtn" href="action.html" role="button">APPLY NOW !</a>
+        </div>
+
+        <!--more events table-->
+        <div class="moreEvent">
+            <h2>MORE EVENTS</h2>
+            <table style="margin-top: 2%">
+                <tr>
+                    <th>Events</th>
+                    <th>Targeted SDGs</th>
+                    <th>Status</th>
+                </tr>
+                <tr>
+                    <td>Empowering Equalities</td>
+                    <td>SDG 10</td>
+                    <td style="color: #008000"><b>Stay Tuned...</b></td>
+                </tr>
+                <tr>
+                    <td>Action for equality</td>
+                    <td>SDG 5</td>
+                    <td style="color: #008000"><b>Stay Tuned...</b></td>
+                </tr>
+                <tr>
+                    <td>Youth Speak Forum 2022</td>
+                    <td>SDG 10</td>
+                    <td style="color: #008000"><b>Stay Tuned...</b></td>
+                </tr>
+                <tr>
+                    <td>ECHO</td>
+                    <td>SDG 13</td>
+                    <td style="color: #008000"><b>Stay Tuned...</b></td>
+                </tr>
+                <tr>
+                    <td>Youth Speak Forum 2021</td>
+                    <td>SDG 6, SDG 12, SDG 14</td>
+                    <td style="color: #B22222"><b>Ended</b></td>
+                </tr>
+            </table>
+            
+            <!--partnership graphic-->
+            <div class = partner style ="margin-top: 3%">
+                <p><b>Special Partner with: </b></p>
+                <img src="media/aiesec.png" width="200px" height="40px" class ="aiesec">
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+</body>

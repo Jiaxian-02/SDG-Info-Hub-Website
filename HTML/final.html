@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Better World</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/final.css">
+    <link rel="stylesheet" type="text/css" href="css/nav.css">
+    <link rel="stylesheet" type="text/css" href="css/sdg.css">
+
+
+</head>
+
+<body>
+    <!--Navogation bar-->
+    <div class="welc">
+        <header>
+            <nav class="navbar">
+                <span>
+                    <b><a href="final.html">Home</a></b>
+                    <div class="dropdown">
+                        <b><button class="dropbtn"><span>Events</span></b>
+                        <i class="fa fa-caret-down"></i>
+                        <div class="dropdown-content">
+                            <a href="events.html">HOT Events</a>
+                            <a href="action.html">Take Action</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <b><button class="dropbtn"><span>About</span></b>
+                        <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="about.html">History</a>
+                            <a href="contact.html">Contact</a>
+                        </div>
+                    </div>
+                    <b><a href="login.html">Log In / Sign Up</a></b>
+                </span>
+                <b>
+                    <div class="logo">BETTER WORLD</div>
+                </b>
+            </nav>
+        </header>
+  
+        <!--mountain background-->
+        <section>
+            <img src="media/mountains_behind.png" id="mountain_behind">
+            <h2 id="text" id="text">Let The SunShine In</h2>
+            <a href="#sdgs" class="btn" id="btn"> Explore </a>
+            <img src="media/mountains_front.png" id="mountain_front">
+
+        </section>
+
+        <!--music-->
+        <div class="music">
+            <div class="bgmplayer">
+                <img id="player" onclick="action(); changeImage();" src="media/play.png" width="50px" height="50px" />
+                <audio id="audio" src="media/bgm.mp3" loop autoloop></audio>
+            </div>
+
+            <!--Java script for white music icon-->
+            <script>
+                function changeImage() {
+                    var image = document.getElementById('player');
+                    if (image.src.match("pause")) {
+                        image.src = "media/play.png";
+                    }
+                    else {
+                        image.src = "media/pause.png";
+                    }
+                }
+
+                var playing = false;
+
+                function action() {
+                    var audio = document.getElementById("audio");
+                    if (playing === false) {
+                        audio.play();
+                        playing = true;
+                    } else {
+                        audio.pause();
+                        playing = false;
+                    }
+                }
+            </script>
+        </div>
+
+        <!--slogan text and explore button scrolling effect-->
+        <script>
+            let text = document.getElementById('text');
+            let btn = document.getElementById('btn');
+
+            window.addEventListener('scroll', function () {
+                let value = window.scrollY;
+                text.style.marginRight = value * 4 + 'px';
+            })
+        </script>
+
+        <!--17 sdgs flip card-->
+        <div class="sdgs" id="sdgs">
+            <h1><b>SUSTAINABLE DEVELOPMENT GOALS</b></h1>
+            <h2>THE 17 GOALS</h2>
+
+            <div class="sdg">
+                <div class="sdg-inner">
+                    <div class="sdg-front">
+                        <img src="media/sdg1.PNG" width="205px" height="450px">
+                    </div>
+                    <div class="sdgb" style="background-color:#DC143C ">
+                        <h1>Goal 1</h1>
+                        <p><b>End poverty in all its form anywhere</b></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sdg">
+                <div class="sdg-inner">
+                    <div class="sdg-front">
+                        <img src="media/sdg2.PNG" width="205px" height="450px">
+                    </div>
+                    <div class="sdgb" style="background-color: #DAA502">
+                        <h1>Goal 2</h1>
+                        <p><b>End hunger, acheive food security and improve nutrition and promote sustainable
+                                agriculture</b></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sdg">
+                <div class="sdg-inner">
+                    <div class="sdg-front">
+                        <img src="media/sdg3.PNG" width="205px" height="450px">
+                    </div>
+                    <div class="sdgb" style="background-color: #2E8B57">
+                        <h1>Goal 3</h1>
+                        <p><b>Ensure healthy lives and promote well being for all at all ages</b></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sdg">
+                <div class="sdg-inner">
+                    <div class="sdg-front">
+                        <img src="media/sdg4.PNG" width="205px" height="450px">
+                    </div>
+                    <div class="sdgb" style="background-color:#B22222 ">
+                        <h1>Goal 4</h1>
+                        <p><b>Ensure inclusive and equatable quality education and promote lifelong
+                                learning opportunities to all</b></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sdg">
+                <div class="sdg-inner">
+                    <div class="sdg-front">
+                        <img src="media/sdg5.PNG" width="205px" height="450px">
+                    </div>
+                    <div class="sdgb" style="background-color: #FF4500 ">
+                        <h1>Goal 5</h1>
+                        <p><b>Acheive gender equality and empower all women and girls</b></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sdg">
+                <div class="sdg-inner">
+                    <div class="sdg-front">
+                        <img src="media/sdg6.PNG" width="205px" height="450px">
+                    </div>
+                    <div class="sdgb" style="background-color:#00BFFF ">
+                        <h1>Goal 6</h1>
+                        <p><b>Ensure availability and sustainable management of water and sanitation for all</b></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sdg">
+                <div class="sdg-inner">
+                    <div class="sdg-front">
+                        <img src="media/sdg7.PNG" width="205px" height="450px">
+                    </div>
+                    <div class="sdgb" style="background-color:#FFD700 ">
+                        <h1>Goal 7</h1>
+                        <p><b>Ensure access to affordable, reliable, sustainable and modern energy for all</b> </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sdg">
+                <div class="sdg-inner">
+                    <div class="sdg-front">
+                        <img src="media/sdg8.PNG" width="205px" height="450px">
+                    </div>
+                    <div class="sdgb" style="background-color: #8B0000">
+                        <h1>Goal 8</h1>
+                        <p><b>Promote sustained, inclusive and sustainable economic growth, full and productive
+                                employment
+                                and decent work for all</b></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sdg">
+                <div class="sdg-inner">
+                    <div class="sdg-front">
+                        <img src="media/sdg9.PNG" width="205px" height="450px">
+                    </div>
+                    <div class="sdgb" style="background-color:#FF6347 ">
+                        <h1>Goal 9</h1>
+                        <p><b>Build resilient infrastructure, promote inclusive and sustainable industrialization and
+                                foster
+                                innovation</b></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sdg">
+                <div class="sdg-inner">
+                    <div class="sdg-front">
+                        <img src="media/sdg10.PNG" width="205px" height="450px">
+                    </div>
+                    <div class="sdgb" style="background-color:#FF1493 ">
+                        <h1>Goal 10</h1>
+                        <p><b>Reduces inequality within and among countries</b></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sdg">
+                <div class="sdg-inner">
+                    <div class="sdg-front">
+                        <img src="media/sdg11.PNG" width="205px" height="450px">
+                    </div>
+                    <div class="sdgb" style="background-color: #FFA500">
+                        <h1>Goal 11</h1>
+                        <p><b>Make city and human settlements inclusive, safe, resilient, and sustainable</b></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sdg">
+                <div class="sdg-inner">
+                    <div class="sdg-front">
+                        <img src="media/sdg12.PNG" width="205px" height="450px">
+                    </div>
+                    <div class="sdgb" style="background-color:#B8860B ">
+                        <h1>Goal 12</h1>
+                        <p><b>Ensure sustainable consumption and production patterns</b></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sdg">
+                <div class="sdg-inner">
+                    <div class="sdg-front">
+                        <img src="media/sdg13.PNG" width="205px" height="450px">
+                    </div>
+                    <div class="sdgb" style="background-color: #006400">
+                        <h1>Goal 13</h1>
+                        <p><b>Take urgent action to combat climate change and its impacts</b></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sdg">
+                <div class="sdg-inner">
+                    <div class="sdg-front">
+                        <img src="media/sdg14.PNG" width="205px" height="450px">
+                    </div>
+                    <div class="sdgb" style="background-color:#1E90FF">
+                        <h1>Goal 14</h1>
+                        <p><b>Conserve and sustainably use the oceans, seas and marine resources for sustainable
+                                development</b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sdg">
+            <div class="sdg-inner">
+                <div class="sdg-front">
+                    <img src="media/sdg15.PNG" width="205px" height="450px">
+                </div>
+                <div class="sdgb" style="background-color: #32CD32">
+                    <h1>Goal 15</h1>
+                    <p><b>Protect, restore and promote sustainable use of terrestrial ecosystems, sustainably manage
+                            forests, combat desertification, and halt and reverse land degradation and halt
+                            biodiversity
+                            loss</b></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="sdg">
+            <div class="sdg-inner">
+                <div class="sdg-front">
+                    <img src="media/sdg16.PNG" width="205px" height="450px">
+                </div>
+                <div class="sdgb" style="background-color: #4682B4">
+                    <h1>Goal 16</h1>
+                    <p><b>Promote peaceful and inclusive societies for sustainable development, provide access to
+                            justice for all and build effective, accountable and inclusive institutions at all
+                            levels</b></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="sdg">
+            <div class="sdg-inner">
+                <div class="sdg-front">
+                    <img src="media/sdg17.PNG" width="206px" height="450px">
+                </div>
+                <div class="sdgb" style="background-color: #483D8B">
+                    <h1>Goal 17</h1>
+                    <p><b>Strengthen the means of implementation and revitalize the Global Partnership for
+                            Sustainable Development</b></p>
+                </div>
+            </div>
+        </div>
+        <div class="sdg">
+            <div class="sdg-front">
+                <img src="media/Sustainable_Development_Goals_logo.svg.png" alt="sdgLogo" width="200px" height="450px">
+            </div>
+        </div>
+    </div>
+
+    <!--Explanation on what is sdg-->
+    <section>
+        <div class="what_is_sdg">
+            <h1><b>Do You Know What is SDGs ?</b></h1>
+            <p>The Sustainable Development Goals (SDGs), also known as the Global Goals, were adopted by the United
+                Nations in 2015 as a universal call to action to end poverty, protect the planet, and ensure that by
+                2030 all people enjoy peace and prosperity.
+                The 17 SDGs are integrated—they recognize that action in one area will affect outcomes in others,
+                and
+                that development must balance social, economic and environmental sustainability.
+                Countries have committed to prioritize progress for those who're furthest behind. The SDGs are
+                designed
+                to end poverty, hunger, AIDS, and discrimination against women and girls.
+                The creativity, knowhow, technology and financial resources from all of society is necessary to
+                achieve
+                the SDGs in every context.</p>
+        </div>
+    </section>
+
+    <!--sdg logo-->
+    <div class="circle-sdg">
+        <img src="media/circle-sdg.png" alt="sdgLogo" width="500px" height="340px">
+    </div>
+
+    <!--Explanation of why sdg is matter-->
+    <section>
+        <div class="why">
+            <h1><b>Why SDGs Matter ?</b></h1>
+            <p>The 2030 Agenda for Sustainable Development provides a global blueprint for dignity, peace and
+                prosperity for people and the planet, now and in the future</p>
+        </div>
+    </section>
+
+    <!--sdg's youtube video-->
+    <div class="youtube-video">
+        <iframe width="650" height="300" src="https://www.youtube.com/embed/GHczXNi9bUs"></iframe>   
+    </div>
+    
+   
+
+</body>
+
+</html>
